@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>ARK-OS | Mount Weather Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lokasyon-stili.css"> </head>
+<body class="weather-bg">
+
+    <div class="hud-frame" style="border-color: rgba(255, 0, 0, 0.3);">
+        
+        <nav class="terminal-nav" style="border-bottom: 1px solid red;">
+            <div class="nav-left">
+                <div class="back-action" onclick="location.href='inis-paneli.html'" style="color: #ff4444;">
+                    <span class="bracket">[</span>
+                    <span class="action-text">RADYASYON KİLİDİNDEN ÇIK</span>
+                    <span class="bracket">]</span>
+                </div>
+            </div>
+            <div class="nav-center">
+                <h1 class="glitch-text" data-text="MOUNT WEATHER - LVL 5" style="color: #ff0000; text-shadow: 2px 0 #550000;">MOUNT WEATHER - LVL 5</h1>
+            </div>
+            <div class="nav-right">
+                <div class="connection-status" style="color: #ff0000;">
+                    <span class="dot" style="background: #ff0000; box-shadow: 0 0 10px #ff0000;"></span> SYSTEM COMPROMISED
+                </div>
+            </div>
+        </nav>
+
+        <main class="content-wrapper">
+            <section class="info-section">
+                <h2 class="section-title" style="color: #ff0000; border-bottom: 1px solid #ff0000;">DAĞIN ADAMLARI</h2>
+                <p class="typewriter-text" style="color: #ffcccc;">
+                    Radyasyondan korunmak için inşa edilmiş devasa bir sığınak. 
+                    İçeridekiler için dışarısı ölüm demek. 
+                    DİKKAT: Kan nakli protokolü devrede!
+                </p>
+                
+                <div class="stats-box">
+                    <div class="stat-item"><span>OKSİJEN SAFLIĞI:</span> 
+                        <div class="bar"><div class="fill" style="width: 100%; background: #ff0000; box-shadow: 0 0 10px #ff0000;"></div></div>
+                    </div>
+                    <div class="stat-item"><span>DIŞ DÜNYA TOLERANSI:</span> 
+                        <div class="bar"><div class="fill" style="width: 0%; background: #550000;"></div></div>
+                    </div>
+                </div><br>
+                   <div class="char-list">
+                    <h3 style="color: #ff0000;">KAYITLI DENEKLER</h3>
+                    <ul style="color: #ffcccc;">
+                        <li>DANTE WALLACE - Başkan</li>
+                        <li>CAGE WALLACE - Güvenlik Şefi</li>
+                        <li>MAYA VIE - Teknisyen (Dost)</li>
+                    </ul>
+                </div>
+                   <div class="system-logs">
+                  <p>> Bağıl Nem: %12</p>
+                  <p>> Radyasyon: Stabil</p>
+                  <p>> Yerli Sinyali: Yakınlarda</p>
+                </div>
+                
+            </section>
+
+            <section class="media-section">
+                <div class="image-container" style="border-color: #ff0000;">
+                    <img src="img/mount-weather.jpg" alt="Mount Weather Lab" class="main-img">
+                    <div class="scan-line" style="background: rgba(255, 0, 0, 0.5); box-shadow: 0 0 15px #ff0000;"></div>
+                </div>
+             
+            </section>
+        </main>
+    </div>
+
+    <div class="fast-travel-container">
+    <div class="travel-trigger" onclick="toggleTravelMenu()">
+        <span class="pulse-icon"></span> LOKASYON DEĞİŞTİR
+    </div>
+    <div id="travel-menu" class="travel-options">
+        <button onclick="location.href='arkadia.html'">ARKADIA</button>
+        <button onclick="location.href='polis.html'">POLIS</button>
+        <button onclick="location.href='mount-weather.html'">MT. WEATHER</button>
+        <button onclick="location.href='azgeda.html'">AZGEDA</button>
+    </div>
+</div>
+
+<script>
+    // Menüyü açıp kapatan fonksiyon
+    function toggleTravelMenu() {
+        const menu = document.getElementById('travel-menu');
+        // Eğer menü görünürse gizle, gizliyse göster (Toggle mantığı)
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>ARK-OS | Azgeda Territory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lokasyon-stili.css"> </head>
+<body class="azgeda-bg">
+
+    <div class="hud-frame" style="border-color: rgba(173, 216, 230, 0.3);">
+        
+        <nav class="terminal-nav" style="border-bottom: 1px solid #add8e6;">
+            <div class="nav-left">
+                <div class="back-action" onclick="location.href='inis-paneli.html'"style="color: #add8e6;">
+                    <span class="bracket">[</span>
+                    <span class="action-text">BUZ TOPRAKLARINDAN ÇIK</span>
+                    <span class="bracket">]</span>
+                </div>
+            </div>
+            <div class="nav-center">
+                <h1 class="glitch-text" data-text="AZGEDA - ICE NATION" style="color: #fff; text-shadow: 2px 0 #add8e6;">AZGEDA - ICE NATION</h1>
+            </div>
+            <div class="nav-right">
+                <div class="connection-status" style="color: #add8e6;">
+                    <span class="dot" style="background: #add8e6; box-shadow: 0 0 10px #add8e6;"></span> TEMP: -25°C
+                </div>
+            </div>
+        </nav>
+
+        <main class="content-wrapper">
+            <section class="info-section">
+                <h2 class="section-title" style="color: #add8e6; border-bottom: 1px solid #add8e6;">BUZ KLANININ GÜCÜ</h2>
+                <p class="typewriter-text" style="color: #e0f7fa;">
+                    Azgeda, koalisyonun en savaşçı ve acımasız klanıdır. 
+                    Toprakları her zaman karla kaplıdır. 
+                    Kendi yasaları vardır ve bağlılıkları sadece Kraliçe'yedir...
+                </p>
+                
+                <div class="stats-box">
+                    <div class="stat-item"><span>ORDU GÜCÜ:</span> 
+                        <div class="bar"><div class="fill" style="width: 90%; background: #add8e6; box-shadow: 0 0 10px #fff;"></div></div>
+                    </div>
+                    <div class="stat-item"><span>DIŞA KAPALILIK:</span> 
+                        <div class="bar"><div class="fill" style="width: 100%; background: #5f9ea0;"></div></div>
+                    </div>
+                </div><br>
+                 <div class="char-list">
+                    <h3 style="color: #add8e6;">KRALİYET SOYU</h3>
+                    <ul style="color: #e0f7fa;">
+                        <li>NIA - Buz Kraliçesi</li>
+                        <li>ROAN - Buz Prensi (Sürgün)</li>
+                        <li>ONTARI - Sahte Komutan</li>
+                    </ul>
+                </div>
+                   <div class="system-logs">
+                  <p>> Bağıl Nem: %12</p>
+                  <p>> Radyasyon: Stabil</p>
+                  <p>> Yerli Sinyali: Yakınlarda</p>
+                </div>
+                
+            </section>
+
+            <section class="media-section">
+                <div class="image-container" style="border-color: #add8e6; box-shadow: inset 0 0 50px rgba(173, 216, 230, 0.2);">
+                    <img src="img/azgeda-lands.jpg" alt="Azgeda Snowy Mountains" class="main-img">
+                    <div class="snow-overlay"></div> 
+                </div>
+                
+            </section>
+        </main>
+    </div>
+ 
+
+    <div class="fast-travel-container">
+    <div class="travel-trigger" onclick="toggleTravelMenu()">
+        <span class="pulse-icon"></span> LOKASYON DEĞİŞTİR
+    </div>
+    <div id="travel-menu" class="travel-options">
+        <button onclick="location.href='arkadia.html'">ARKADIA</button>
+        <button onclick="location.href='polis.html'">POLIS</button>
+        <button onclick="location.href='mount-weather.html'">MT. WEATHER</button>
+        <button onclick="location.href='azgeda.html'">AZGEDA</button>
+    </div>
+</div>
+
+<script>
+    // Menüyü açıp kapatan fonksiyon
+    function toggleTravelMenu() {
+        const menu = document.getElementById('travel-menu');
+        // Eğer menü görünürse gizle, gizliyse göster (Toggle mantığı)
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+</script>
+</body>
+</html>

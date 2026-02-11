@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head> 
+    <meta charset="UTF-8">
+    <title>ARK-OS | Arkadia Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lokasyon-stili.css"> </head>
+   
+    <body class="arkadia-bg">
+         <div class="hud-frame"> 
+            <header class="terminal-header">
+            
+                <nav class="terminal-nav">
+    <div class="nav-left">
+        <div class="back-action" onclick="location.href='inis-paneli.html'">
+            <span class="bracket">[</span>
+            <span class="action-text">YÖRÜNGEYE DÖN</span>
+            <span class="bracket">]</span>
+        </div>
+    </div>
+    
+    <div class="nav-center">
+        <h1 class="glitch-text" data-text="ARKADIA - SECTOR 1">ARKADIA - SECTOR 1</h1>
+    </div>
+
+    <div class="nav-right">
+        <div class="connection-status">
+            <span class="dot"></span> SECURE CONNECTION
+        </div>
+    </div>
+</nav>
+          
+        </header>
+
+        <main class="content-wrapper">
+            <section class="info-section">
+                <h2 class="section-title">TARİHÇE</h2>
+                <p class="typewriter-text">
+                    Arkadia, düşen Ark istasyonunun ana gövdesinden inşa edildi. 
+                    Başta Camp Jaha olarak biliniyordu. Burası Skaikru'nun yeryüzündeki kalesi...
+                </p>
+                <br>
+                <div class="stats-box">
+                    <div class="stat-item"><span>SAVUNMA:</span>
+                         <div class="bar">
+                            <div class="fill" style="width: 85%;">
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-item">
+                        <span>KAYNAK:</span> 
+                          <div class="bar">
+                            <div class="fill" style="width: 40%;">
+                             </div>
+                        </div>
+                    </div>
+                </div>
+<br>
+
+                <div class="char-list">
+                    <h3>KRİTİK PERSONEL</h3>
+                    <ul>
+                        <li>BELLAMY BLAKE - Askeri Lider</li>
+                        <li>RAVEN REYES - Baş Mühendis</li>
+                    </ul>
+                </div>
+                <div class="system-logs">
+                  <p>> Bağıl Nem: %12</p>
+                  <p>> Radyasyon: Stabil</p>
+                  <p>> Yerli Sinyali: Yakınlarda</p>
+                </div>
+
+            </section>
+
+            <section class="media-section">
+                <div class="image-container">
+                    <img src="img/ark.jpg" alt="Arkadia" class="main-img">
+                    <div class="scan-line"></div> </div>
+                
+            </section>
+        </main>
+    </div>
+ <div class="fast-travel-container">
+    <div class="travel-trigger" onclick="toggleTravelMenu()">
+        <span class="pulse-icon"></span> LOKASYON DEĞİŞTİR
+    </div>
+    <div id="travel-menu" class="travel-options">
+        <button onclick="location.href='arkadia.html'">ARKADIA</button>
+        <button onclick="location.href='polis.html'">POLIS</button>
+        <button onclick="location.href='mount-weather.html'">MT. WEATHER</button>
+        <button onclick="location.href='azgeda.html'">AZGEDA</button>
+    </div>
+</div>
+
+<script>
+    // Menüyü açıp kapatan fonksiyon
+    function toggleTravelMenu() {
+        const menu = document.getElementById('travel-menu');
+        // Eğer menü görünürse gizle, gizliyse göster (Toggle mantığı)
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+</script>
+    <script>
+        console.log("Arkadia sistemleri yüklendi...");
+    </script>
+</body>
+</html>

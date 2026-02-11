@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>ARK-OS | Project 5</title>
+    <link rel="stylesheet" href="inis-paneli.css">
+</head>
+<body>
+
+    <canvas id="earthCanvas"></canvas>
+
+    <div id="sahne-giris" class="ui-box">
+        <h1 class="neon-text">ARK-OS</h1>
+        <p class="status-text">INITIALIZING LANDING PROTOCOL...</p>
+        <div id="kayit-alani">
+            <input type="text" id="kullanici-ad" placeholder="Skaikru ID..." autocomplete="off">
+            <button onclick="kaydet()" class="btn-neon">DOĞRULA</button>
+        </div>
+        <div id="inis-onay" class="gizli">
+            <p id="selamlama"></p>
+            <button onclick="dunyayaIn()" class="btn-neon btn-blue">DÜNYA'YA İNİŞ YAP</button>
+        </div>
+    </div>
+<div id="sahne-panel" class="ui-box gizli" style="width: 500px;"> <h2 class="neon-text" style="font-size: 1.5rem;">DROP-SHIP GEÇİŞ KOORDİNATLARI</h2>
+    <div class="grid-konteynir">
+      
+        <div class="kart" onclick="finalGecis('ARKADIA')" data-ox="O2: %21" data-pop="Nüfus: 400">ARKADIA (Camp Jaha)</div>
+        <div class="kart" onclick="finalGecis('MOUNT WEATHER')" data-ox="O2: %20" data-pop="Nüfus: 380">MOUNT WEATHER</div>
+        <div class="kart" onclick="finalGecis('POLIS')" data-ox="O2: %19" data-pop="Nüfus: 1500">POLIS (Başkent)</div>
+        <div class="kart" onclick="finalGecis('AZGEDA')" data-ox="O2: %17" data-pop="Nüfus: 900">BUZ KLANININ KÖYÜ</div>
+       
+    </div>
+</div>
+    <div id="sahne-ana" class="gizli">
+        <h1 class="neon-text">SİSTEM ÇEVRİMİÇİ</h1>
+        <p id="final-mesaj"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="landingg.js"></script>
+</body>
+</html>

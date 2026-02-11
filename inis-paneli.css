@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Kaydırma çubuklarını yok eder */
+    background-color: #000; /* Uzay derinliği için siyah arka plan */
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* 3D Canvas'ı arka plana sabitle: Diğer elemanların arkasında kalmasını sağlar */
+#earthCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* En alt katman */
+}
+
+/* Form Kutusu: Yarı şeffaf Raven terminali paneli */
+.ui-box {
+    position: relative;
+    z-index: 10; /* Dünyanın ve yıldızların önünde durur */
+    top: 50%;
+    left: 20%; /* Dünyayı sağa aldığımız için formu sola yaslıyoruz */
+    transform: translateY(-50%); /* Dikeyde tam ortalar */
+    width: 350px;
+    padding: 40px;
+    background: rgba(0, 20, 20, 0.4); /* Cam efekti için yarı şeffaf yeşilimsi siyah */
+    border: 1px solid rgba(0, 255, 150, 0.3); /* İnce neon çerçeve */
+    border-radius: 10px;
+    backdrop-filter: blur(5px); /* Arkadaki yıldızları hafifçe bulandırır (Cam efekti) */
+    text-align: center;
+}
+
+/* Neon Yazı Efektleri: Yeşil parlama sağlar */
+.neon-text {
+    color: #00ff96;
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 0 0 10px #00ff96, 0 0 20px #00ff96; /* Yazının etrafındaki ışık patlaması */
+}
+
+.status-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+/* Input Alanı: Terminal giriş kutusu stili */
+input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ff96;
+    padding: 12px;
+    color: #00ff96;
+    font-family: 'Share Tech Mono', monospace;
+    outline: none;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Padding'in genişliği bozmasını engeller */
+}
+
+/* Buton Tasarımı: Neon etkileşimli butonlar */
+.btn-neon {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #00ff96;
+    color: #00ff96;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    transition: 0.3s; /* Renk değişimini yumuşatır */
+}
+
+/* Üzerine gelince buton parlar */
+.btn-neon:hover {
+    background: #00ff96;
+    color: #000;
+    box-shadow: 0 0 20px #00ff96;
+}
+
+/* İniş butonu için özel mavi stil */
+.btn-blue {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-blue:hover {
+    background: #007bff;
+    color: #fff;
+    box-shadow: 0 0 20px #007bff;
+}
+
+/* Yardımcı Sınıflar: Elemanları gizlemek için kullanılır */
+.gizli { display: none; }
+
+#selamlama {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Sayfaların yumuşakça kaybolup gelmesi için */
+.ui-box {
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Gizleme sınıfı: Hem görünmez yapar hem de tıklanmasını engeller */
+.gizli {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    display: none; /* JS ile bunu kontrol edeceğiz */
+}
+/* Kartların genel yerleşimi */
+.grid-konteynir {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    margin-top: 20px;
+    perspective: 1000px; /* 3D derinlik hissi ekler */
+}
+
+.kart {
+    position: relative;
+    border: 1px solid rgba(0, 255, 150, 0.4);
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Yaylanma efekti */
+    color: #fff;
+    font-size: 0.85rem;
+    background: rgba(0, 20, 20, 0.8); /* Daha koyu arka plan */
+    text-transform: uppercase;
+    overflow: hidden; /* İçerideki parlamayı sınırlar */
+}
+
+/* Hover olduğunda kartın parlaması */
+.kart:hover {
+    border-color: #00ff96;
+    box-shadow: 0 0 20px rgba(0, 255, 150, 0.4), inset 0 0 10px rgba(0, 255, 150, 0.2);
+    transform: scale(1.02); /* Hafif büyüme */
+}
+
+/* ESKİ AFTER'I SİLDİK, YENİ SİSTEM: */
+/* Bilgileri kartın içine, ismin altına yerleştiriyoruz */
+.kart::after {
+    content: attr(data-ox) " — " attr(data-pop); 
+    display: block; /* Alt satıra indirir */
+    font-size: 0.7rem;
+    color: #00ff96;
+    margin-top: 8px;
+    opacity: 0; /* Başlangıçta gizli */
+    transform: translateY(10px); /* Aşağıdan gelme efekti için */
+    transition: all 0.3s ease;
+    border-top: 1px dotted rgba(0, 255, 150, 0.3);
+    padding-top: 5px;
+}
+
+/* Hover olduğunda veriler aşağıdan yukarı süzülerek gelir */
+.kart:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}

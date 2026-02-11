@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>ARK-OS | Polis Capital</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="lokasyon-stili.css"> </head>
+
+<body class="polis-bg"> 
+    <div class="hud-frame" style="border-color: rgba(150, 0, 255, 0.2);">
+         <nav class="terminal-nav">
+            <div class="nav-left">
+                <div class="back-action" onclick="location.href='inis-paneli.html'">
+                    <span class="bracket">[</span>
+                    <span class="action-text">KOORDİNATLARA DÖN</span>
+                    <span class="bracket">]</span>
+                </div>
+            </div>
+            <div class="nav-center">
+                <h1 class="glitch-text" data-text="POLIS - THE CAPITAL">POLIS - THE CAPITAL</h1>
+            </div>
+            <div class="nav-right">
+                <div class="connection-status" style="color: #9600ff;">
+                    <span class="dot" style="background: #9600ff; box-shadow: 0 0 10px #9600ff;"></span> HEDA'S NETWORK
+                </div>
+            </div>
+        </nav>
+
+        <main class="content-wrapper">
+            <section class="info-section">
+                <h2 class="section-title" style="color: #9600ff; border-bottom: 1px solid #9600ff;">KUTSAL ŞEHİR</h2>
+                <p class="typewriter-text">
+                    Polis, yerlilerin (Grounders) birleştiği kutsal başkenttir. 
+                    Büyük kuleden yönetilir. "Blood must have blood" (Jus drein jus draun) 
+                    yasasının kalbi burada atar...
+                </p>
+                <br>
+                <div class="stats-box">
+                    <div class="stat-item"><span>SAVAŞÇI GÜCÜ:</span> 
+                        <div class="bar"><div class="fill" style="width: 95%; background: #9600ff; box-shadow: 0 0 10px #9600ff;"></div></div>
+                    </div>
+                    <div class="stat-item"><span>TEKNOLOJİ:</span> 
+                        <div class="bar"><div class="fill" style="width: 15%; background: #9600ff;"></div></div>
+                    </div>
+                </div>
+
+<br>
+                   <div class="char-list">
+                    <h3 style="color: #9600ff;">ÖNEMLİ KİŞİLER</h3>
+                    <ul>
+                        <li>LEXA - Komutan (Heda)</li>
+                        <li>TITUS - Alev Koruyucusu (Fleimkepa)</li>
+                        <li>MADI - Gece Kanı (Natblida)</li>
+                    </ul>
+                </div>
+                   <div class="system-logs">
+                  <p>> Bağıl Nem: %12</p>
+                  <p>> Radyasyon: Stabil</p>
+                  <p>> Yerli Sinyali: Yakınlarda</p>
+                </div>
+                
+            </section>
+
+            <section class="media-section">
+                <div class="image-container" style="border-color: #9600ff;">
+                    <img src="img/pol.jpg" alt="Polis Tower" class="main-img">
+                    <div class="scan-line" style="background: rgba(150, 0, 255, 0.5); box-shadow: 0 0 15px #9600ff;"></div>
+                </div>
+             
+            </section>
+        </main>
+    </div>
+
+    <div class="fast-travel-container">
+    <div class="travel-trigger" onclick="toggleTravelMenu()">
+        <span class="pulse-icon"></span> LOKASYON DEĞİŞTİR
+    </div>
+    <div id="travel-menu" class="travel-options">
+        <button onclick="location.href='arkadia.html'">ARKADIA</button>
+        <button onclick="location.href='polis.html'">POLIS</button>
+        <button onclick="location.href='mount-weather.html'">MT. WEATHER</button>
+        <button onclick="location.href='azgeda.html'">AZGEDA</button>
+    </div>
+</div>
+
+<script>
+    // Menüyü açıp kapatan fonksiyon
+    function toggleTravelMenu() {
+        const menu = document.getElementById('travel-menu');
+        // Eğer menü görünürse gizle, gizliyse göster (Toggle mantığı)
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+</script>
+</body>
+</html>
