@@ -36,16 +36,7 @@
 * `lokasyon-stili.css`: Arkadia, Polis gibi keşif sayfalarının HUD tasarımları.
 * `arkadia.html`: Sektör 1 - Ana kamp detayları.
 
----
 
-## 📡 Sistem Kurulumu (Deployment)
-
-Bu proje **GitHub Pages** üzerinde sorunsuz çalışacak şekilde optimize edilmiştir.
-1. Dosyaları depoya yükleyin.
-2. `Settings > Pages` kısmından `main` branch'ini seçin.
-3. İniş protokolünü başlatın!
-
----
 
 > *"In peace, may you leave the shore. In love, may you find the next. Safe passage on your travels, until our final journey to the ground."*
 > 
