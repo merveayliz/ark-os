@@ -25,7 +25,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.8s ease; /* Zoom hareketinin yumuşak olması için */
+    transition: transform 0.8s ease; 
 }
 
 
@@ -47,14 +47,14 @@ body {
     font-weight: bold;
     font-size: 0.8rem;
     z-index: 5; 
-    opacity: 0; /* Başlangıçta yazıyı gizle */
-    transition: opacity 0.3s ease; /* Yazının aniden değil, süzülerek gelmesi için */
-    pointer-events: none; /* Yazı mouse hareketine engel olmaz */
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    pointer-events: none; 
 }
 
 
 .image-container:hover::before {
-    opacity: 1; /* Mouse resmin üzerindeyken yazıyı göster */
+    opacity: 1; 
 }
 
 
@@ -175,7 +175,7 @@ body {
     background: #00ff96;
     border-radius: 50%;
     box-shadow: 0 0 10px #00ff96;
-    animation: blink 1s infinite; /* Yanıp sönme efekti */
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
