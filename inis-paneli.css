@@ -28,7 +28,7 @@ body, html {
     background: rgba(0, 20, 20, 0.4);
     border: 1px solid rgba(0, 255, 150, 0.3);
     border-radius: 10px;
-    backdrop-filter: blur(5px); /* Arkadaki yıldızları hafifçe bulandırır (Cam efekti) */
+    backdrop-filter: blur(5px); 
     text-align: center;
 }
 
@@ -144,12 +144,12 @@ input {
 
 .kart::after {
     content: attr(data-ox) " — " attr(data-pop); 
-    display: block; /* Alt satıra indirir */
+    display: block;
     font-size: 0.7rem;
     color: #00ff96;
     margin-top: 8px;
-    opacity: 0; /* Başlangıçta gizli */
-    transform: translateY(10px); /* Aşağıdan gelme efekti için */
+    opacity: 0; 
+    transform: translateY(10px); 
     transition: all 0.3s ease;
     border-top: 1px dotted rgba(0, 255, 150, 0.3);
     padding-top: 5px;
