@@ -8,14 +8,12 @@ body, html {
     font-family: 'Share Tech Mono', monospace;
 }
 
-
 #earthCanvas {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1; 
 }
-
 
 .ui-box {
     position: relative;
@@ -32,7 +30,6 @@ body, html {
     text-align: center;
 }
 
-
 .neon-text {
     color: #00ff96;
     font-size: 3rem;
@@ -46,7 +43,6 @@ body, html {
     letter-spacing: 2px;
     margin-bottom: 30px;
 }
-
 
 input {
     width: 100%;
@@ -80,7 +76,6 @@ input {
     box-shadow: 0 0 20px #00ff96;
 }
 
-
 .btn-blue {
     border-color: #007bff;
     color: #007bff;
@@ -91,7 +86,6 @@ input {
     color: #fff;
     box-shadow: 0 0 20px #007bff;
 }
-
 
 .gizli { display: none; }
 
