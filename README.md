@@ -28,14 +28,6 @@
 
 ---
 
-## 📂 Dosya Yapısı ve Yerleşim
-
-* `inis-paneli.html`: Ana terminal giriş ve 3D dünya ekranı.
-* `inis-paneli.css`: Ana sistemin neon ve cam efektli stilleri.
-* `landingg.js`: Three.js motorunun ve iniş animasyonunun kalbi.
-* `lokasyon-stili.css`: Arkadia, Polis gibi keşif sayfalarının HUD tasarımları.
-* `arkadia.html`: Sektör 1 - Ana kamp detayları.
-
 
 
 > *"In peace, may you leave the shore. In love, may you find the next. Safe passage on your travels, until our final journey to the ground."*
